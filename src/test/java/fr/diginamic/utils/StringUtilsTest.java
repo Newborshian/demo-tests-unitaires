@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class StringUtilsTest {
 
     @Test
-    void levenshteinDistance() {
+    void levenshteinDistance() throws IllegalAccessException {
 
         // Test de chaînes de caractères identiques
         assertEquals(2, StringUtils.levenshteinDistance("un" , "un"));
@@ -21,7 +21,7 @@ class StringUtilsTest {
         assertEquals(0, StringUtils.levenshteinDistance("Ete", "Hiver"));
         // Operation mathématique + mixe string et nombre
         assertEquals(0, StringUtils.levenshteinDistance("Ete+5", "X+4"));
-        // Paramètre null, cette boucle passe. Comment rendre plus robuste l'app ???
-        assertEquals(0, StringUtils.levenshteinDistance(null, null));
+        // Paramètre null avec Exeption ajouté.
+        assertEquals(0, StringUtils.levenshteinDistance(null ,"ete"));
     }
 }

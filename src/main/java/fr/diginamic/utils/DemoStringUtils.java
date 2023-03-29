@@ -2,7 +2,7 @@ package fr.diginamic.utils;
 
 public class DemoStringUtils {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IllegalAccessException {
 	
 		//TODO La classe semble fonctionne mais fonctionne t'elle si bien que ça ??
 		//TODO Que se passe t'il si on lui passe des paramètres inattendus.

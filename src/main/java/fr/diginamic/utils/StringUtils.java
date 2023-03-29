@@ -14,7 +14,11 @@ public final class StringUtils {
 	 * @param rhs chaine 2
 	 * @return distance
 	 */
-	public static int levenshteinDistance(CharSequence lhs, CharSequence rhs) {
+	public static int levenshteinDistance(CharSequence lhs, CharSequence rhs) throws IllegalAccessException {
+		if (lhs == null || rhs == null) {
+			throw new IllegalArgumentException("Les chaînes d'entrée ne peuvent pas être nulles.");
+		}
+
 		int len0 = lhs.length() + 1;
 		int len1 = rhs.length() + 1;
 
