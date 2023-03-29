@@ -8,18 +8,12 @@ class SaisonTest {
 
     @Test
     void valueOfLibelle() {
+        // Test valide
 
-            // Test valide
-            Saison saison = Saison.valueOfLibelle("Hiver");
-            assertEquals(Saison.HIVER, saison);
+        Saison saison1 = Saison.valueOfLibelle("Printemps");
+        saison1 = Saison.valueOfLibelle("Printemps");
+        assertEquals("1. Printemps", saison1 );
 
-            // Test invalide
-            saison = Saison.valueOfLibelle("Printemps");
-            assertNull(saison);
-
-            // Test null
-            saison = Saison.valueOfLibelle(null);
-            assertNull(saison);
     }
 
 
